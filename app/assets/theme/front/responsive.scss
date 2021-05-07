@@ -124,6 +124,10 @@
 	.navbar-dark .navbar-brand {
 		color: $white;
 		font-size: 1.8rem;
+
+		&:hover {
+			color: $white;
+		}
 	}
 
 	.navbar {
@@ -137,6 +141,11 @@
 
 		.navbar-brand {
 			color: $primary;
+
+
+			&:hover {
+				color: darken($primary, 5%);
+			}
 		}
 
 		.nav-link {
