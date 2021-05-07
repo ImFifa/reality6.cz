@@ -1,3 +1,154 @@
 {block #content}
 
+	<header>
+		<div class="container">
+			<div class="heading">
+				<h1><small>Ing.</small> Vladimír Nedvěd</h1>
+				<h3>MAKLÉŘ PRO Prahu 6 a okolí</h3>
+			</div>
+
+			<img src="{$basePath}/dist/img/vlada01.png" alt="Ing. Vladimír Nedvěd - Makléř pro Prahu 6 a okolí">
+		</div>
+	</header>
+
+	<ul id="features" class="features container">
+		<li>
+			<div class="img-circle">
+				<img src="{$basePath}/dist/img/user.png" alt="Ikona - Odměna za práci makléře, ne majitelům kanceláří">
+			</div>
+			Odměna za práci makléře, ne majitelům kanceláří
+		</li>
+		<li>
+			<div class="img-circle">
+				<img src="{$basePath}/dist/img/certificate.png" alt="Ikona - Více než 15-let skutečné realitní praxe">
+			</div>
+			Více než 15-let skutečné realitní praxe
+		</li>
+		<li>
+			<div class="img-circle">
+				<img src="{$basePath}/dist/img/deal.png" alt="Ikona - Osobní a lidský přístup">
+			</div>
+			Osobní a lidský přístup
+		</li>
+	</ul>
+
+	<section id="omne" class="about">
+		<div class="container">
+			<h2>O mně</h2>
+			<div class="about-text">
+				{box omne}
+			</div>
+		</div>
+	</section>
+
+
+	<section id="sluzby" class="services">
+		<div class="container">
+			<h2>Moje služby</h2>
+
+			<ul>
+				<li><a class="btn btn-primary" href="#"><i class="fas fa-arrow-right"></i> Komplexní realitní služby</a></li>
+				<li><a class="btn btn-primary" href="#"><i class="fas fa-arrow-right"></i> Zajištění financování</a></li>
+				<li><a class="btn btn-primary" href="#"><i class="fas fa-arrow-right"></i> 3D scaning nemovitostí (Co je to?)</a></li>
+				<li><a class="btn btn-primary" href="#"><i class="fas fa-arrow-right"></i> Home staging</a></li>
+			</ul>
+		</div>
+	</section>
+
+	<section id="reference" class="references">
+		<div class="container">
+			<h2>Reference</h2>
+
+			<div id="carouselContent" class="carousel slide carousel-fade" data-ride="carousel">
+				<div class="carousel-inner" role="listbox">
+					<div class="carousel-item active text-center">
+						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent vitae arcu tempor neque lacinia pretium. Mauris tincidunt sem sed arcu. Nulla quis diam. Nunc tincidunt ante vitae massa. Aliquam</p>
+					</div>
+					<div class="carousel-item text-center">
+						<p>Donec neque egestas integer ut augue tellus. Faucibus sodales ac quis arcu et lorem duis tristique potenti. Risus, purus felis, eget fusce lorem vitae.</p>
+					</div>
+					<div class="carousel-item text-center">
+						<p>Leo quis malesuada id tincidunt. Varius hendrerit tincidunt donec nunc duis. Amet, nec in tellus pretium convallis aenean quis aliquam. Adipiscing ornare sapien pellentesque aliquam.</p>
+					</div>
+				</div>
+				<div class="prev-bg"></div>
+				<a class="carousel-control-prev" href="#carouselContent" role="button" data-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="sr-only">Previous</span>
+				</a>
+				<div class="next-bg"></div>
+				<a class="carousel-control-next" href="#carouselContent" role="button" data-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="sr-only">Next</span>
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<section id="kontakt" class="contact">
+		<div class="container">
+			<h2>Kontakt</h2>
+
+			<div class="contact-info">
+				<img src="{$basePath}/dist/img/vlada01.png" alt="Vladimír Nedvěd">
+				<div class="cart-text">
+					<h4>Vladimír Nedvěd</h4>
+					<h5>REALITY6.cz</h5>
+				</div>
+				<ul class="contact-list">
+					<li>
+						<a href="mailto:vladimir@reality6.cz"><i class="fas fa-at"></i> vladimir@reality6.cz</a>
+					</li>
+					<li>
+						<a href="tel:+420606958098"><i class="fas fa-phone-alt"></i> +420 606 958 098</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="contact-form">
+				<div class="form-header">
+					<i class="fas fa-envelope"></i>
+					<div class="header-text">
+						<h4>Ozvěte se mi</h4>
+						<h5><a href="mailto:vladimir@reality6.cz">vladimir@reality6.cz</a></h5>
+					</div>
+				</div>
+
+				{form contactForm, class => 'contactForm row'}
+				<div class="col-lg-6">
+					<div class="form-group">
+						{label name}{/label}
+						{input name class => 'form-control'}
+					</div>
+
+					<div class="form-group">
+						{label email}{/label}
+						{input email class => 'form-control'}
+					</div>
+				</div>
+
+				<div class="col-lg-6">
+					<div class="form-group">
+						{label content}{/label}
+						{input content class => 'form-control'}
+					</div>
+				</div>
+
+				<div class="col-lg-3">
+					<div class="form-group">
+						{input submit class => 'btn btn-primary'}
+					</div>
+				</div>
+
+					{foreach $flashes as $flash}
+						<div class="col-lg-9">
+							<div class="alert alert-{$flash->type}" role="alert">
+								{$flash->message}
+							</div>
+						</div>
+					{/foreach}
+				{/form}
+			</div>
+		</div>
+	</section>
 {/block}

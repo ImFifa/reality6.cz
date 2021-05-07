@@ -25,7 +25,8 @@
 		"simple-cms/box-module": "v2.x-dev",
 		"simple-cms/core-module": "v2.x-dev",
 		"symfony/dotenv": "^5.1",
-		"tracy/tracy": "^2.7.6"
+		"tracy/tracy": "^2.7.6",
+		"contributte/recaptcha": "v3.3.1"
 	},
 	"require-dev": {
 		"orisai/coding-standard": "^1.0.0",
